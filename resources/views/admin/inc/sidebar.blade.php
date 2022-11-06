@@ -46,7 +46,7 @@
                 <div class="menu-item">
                     <!--begin:Menu link-->
                     <a class="menu-link @if($navItem=='home') active @endif"
-                       href="{{route('home')}}">
+                       href="{{route('admin.dashboard')}}">
 											<span class="menu-icon">
 												<!--begin::Svg Icon | path: icons/duotune/general/gen002.svg-->
 												<span class="svg-icon svg-icon-2">
@@ -270,7 +270,7 @@
 												</span>
                                                 <!--end::Svg Icon-->
 											</span>
-											<span class="menu-title">Workshops</span>
+											<span class="menu-title">Contractors</span>
 											<span class="menu-arrow"></span>
 										</span>
                     <!--end:Menu link-->
@@ -338,9 +338,8 @@
                     <!--end:Menu sub-->
                 </div>
                 @endcan
-                @can('admin-products-read')
                 <div data-kt-menu-trigger="click"
-                     class="menu-item menu-accordion @if($navItem=='products') here show @endif">
+                     class="menu-item menu-accordion @if($navItem=='banners') here show @endif">
                     <!--begin:Menu link-->
                     <span class="menu-link">
 											<span class="menu-icon">
@@ -358,7 +357,7 @@
 												</span>
                                                 <!--end::Svg Icon-->
 											</span>
-											<span class="menu-title">Products</span>
+											<span class="menu-title">Banners</span>
 											<span class="menu-arrow"></span>
 										</span>
                     <!--end:Menu link-->
@@ -367,8 +366,8 @@
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link  @if($navItem=='products') active @endif"
-                               href="{{route('products.index')}}">
+                            <a class="menu-link  @if($navItem=='banners') active @endif"
+                               href="{{route('banners.index')}}">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
@@ -381,51 +380,95 @@
                     </div>
                     <!--end:Menu sub-->
                 </div>
-                @endcan
-                @can('admin-stocks-read')
-                <div data-kt-menu-trigger="click"
-                     class="menu-item menu-accordion @if($navItem=='stocks') here show @endif">
-                    <!--begin:Menu link-->
-                    <span class="menu-link">
-											<span class="menu-icon">
-												<!--begin::Svg Icon | path: icons/duotune/finance/fin001.svg-->
-											<span class="svg-icon svg-icon-2">
-													<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                         xmlns="http://www.w3.org/2000/svg">
-														<path
-                                                            d="M20 7H3C2.4 7 2 6.6 2 6V3C2 2.4 2.4 2 3 2H20C20.6 2 21 2.4 21 3V6C21 6.6 20.6 7 20 7ZM7 9H3C2.4 9 2 9.4 2 10V20C2 20.6 2.4 21 3 21H7C7.6 21 8 20.6 8 20V10C8 9.4 7.6 9 7 9Z"
-                                                            fill="currentColor"></path>
-														<path opacity="0.3"
-                                                              d="M20 21H11C10.4 21 10 20.6 10 20V10C10 9.4 10.4 9 11 9H20C20.6 9 21 9.4 21 10V20C21 20.6 20.6 21 20 21Z"
-                                                              fill="currentColor"></path>
-													</svg>
-												</span>
-                                                <!--end::Svg Icon-->
-											</span>
-											<span class="menu-title">Stock Management</span>
-											<span class="menu-arrow"></span>
-										</span>
-                    <!--end:Menu link-->
-                    <!--begin:Menu sub-->
-                    <div class="menu-sub menu-sub-accordion menu-active-bg">
-                        <!--begin:Menu item-->
-                        <div class="menu-item">
-                            <!--begin:Menu link-->
-                            <a class="menu-link  @if($navItem=='stocks') active @endif"
-                               href="{{route('stocks.index')}}">
-													<span class="menu-bullet">
-														<span class="bullet bullet-dot"></span>
-													</span>
-                                <span class="menu-title">List</span>
-                            </a>
-                            <!--end:Menu link-->
-                        </div>
-                        <!--end:Menu item-->
 
-                    </div>
-                    <!--end:Menu sub-->
-                </div>
-                @endcan
+                {{--                @can('admin-products-read')--}}
+{{--                <div data-kt-menu-trigger="click"--}}
+{{--                     class="menu-item menu-accordion @if($navItem=='products') here show @endif">--}}
+{{--                    <!--begin:Menu link-->--}}
+{{--                    <span class="menu-link">--}}
+{{--											<span class="menu-icon">--}}
+{{--												<!--begin::Svg Icon | path: icons/duotune/finance/fin001.svg-->--}}
+{{--											<span class="svg-icon svg-icon-2">--}}
+{{--													<svg width="24" height="24" viewBox="0 0 24 24" fill="none"--}}
+{{--                                                         xmlns="http://www.w3.org/2000/svg">--}}
+{{--														<path--}}
+{{--                                                            d="M20 7H3C2.4 7 2 6.6 2 6V3C2 2.4 2.4 2 3 2H20C20.6 2 21 2.4 21 3V6C21 6.6 20.6 7 20 7ZM7 9H3C2.4 9 2 9.4 2 10V20C2 20.6 2.4 21 3 21H7C7.6 21 8 20.6 8 20V10C8 9.4 7.6 9 7 9Z"--}}
+{{--                                                            fill="currentColor"></path>--}}
+{{--														<path opacity="0.3"--}}
+{{--                                                              d="M20 21H11C10.4 21 10 20.6 10 20V10C10 9.4 10.4 9 11 9H20C20.6 9 21 9.4 21 10V20C21 20.6 20.6 21 20 21Z"--}}
+{{--                                                              fill="currentColor"></path>--}}
+{{--													</svg>--}}
+{{--												</span>--}}
+{{--                                                <!--end::Svg Icon-->--}}
+{{--											</span>--}}
+{{--											<span class="menu-title">Products</span>--}}
+{{--											<span class="menu-arrow"></span>--}}
+{{--										</span>--}}
+{{--                    <!--end:Menu link-->--}}
+{{--                    <!--begin:Menu sub-->--}}
+{{--                    <div class="menu-sub menu-sub-accordion menu-active-bg">--}}
+{{--                        <!--begin:Menu item-->--}}
+{{--                        <div class="menu-item">--}}
+{{--                            <!--begin:Menu link-->--}}
+{{--                            <a class="menu-link  @if($navItem=='products') active @endif"--}}
+{{--                               href="{{route('products.index')}}">--}}
+{{--													<span class="menu-bullet">--}}
+{{--														<span class="bullet bullet-dot"></span>--}}
+{{--													</span>--}}
+{{--                                <span class="menu-title">List</span>--}}
+{{--                            </a>--}}
+{{--                            <!--end:Menu link-->--}}
+{{--                        </div>--}}
+{{--                        <!--end:Menu item-->--}}
+
+{{--                    </div>--}}
+{{--                    <!--end:Menu sub-->--}}
+{{--                </div>--}}
+{{--                @endcan--}}
+{{--                @can('admin-stocks-read')--}}
+{{--                <div data-kt-menu-trigger="click"--}}
+{{--                     class="menu-item menu-accordion @if($navItem=='stocks') here show @endif">--}}
+{{--                    <!--begin:Menu link-->--}}
+{{--                    <span class="menu-link">--}}
+{{--											<span class="menu-icon">--}}
+{{--												<!--begin::Svg Icon | path: icons/duotune/finance/fin001.svg-->--}}
+{{--											<span class="svg-icon svg-icon-2">--}}
+{{--													<svg width="24" height="24" viewBox="0 0 24 24" fill="none"--}}
+{{--                                                         xmlns="http://www.w3.org/2000/svg">--}}
+{{--														<path--}}
+{{--                                                            d="M20 7H3C2.4 7 2 6.6 2 6V3C2 2.4 2.4 2 3 2H20C20.6 2 21 2.4 21 3V6C21 6.6 20.6 7 20 7ZM7 9H3C2.4 9 2 9.4 2 10V20C2 20.6 2.4 21 3 21H7C7.6 21 8 20.6 8 20V10C8 9.4 7.6 9 7 9Z"--}}
+{{--                                                            fill="currentColor"></path>--}}
+{{--														<path opacity="0.3"--}}
+{{--                                                              d="M20 21H11C10.4 21 10 20.6 10 20V10C10 9.4 10.4 9 11 9H20C20.6 9 21 9.4 21 10V20C21 20.6 20.6 21 20 21Z"--}}
+{{--                                                              fill="currentColor"></path>--}}
+{{--													</svg>--}}
+{{--												</span>--}}
+{{--                                                <!--end::Svg Icon-->--}}
+{{--											</span>--}}
+{{--											<span class="menu-title">Stock Management</span>--}}
+{{--											<span class="menu-arrow"></span>--}}
+{{--										</span>--}}
+{{--                    <!--end:Menu link-->--}}
+{{--                    <!--begin:Menu sub-->--}}
+{{--                    <div class="menu-sub menu-sub-accordion menu-active-bg">--}}
+{{--                        <!--begin:Menu item-->--}}
+{{--                        <div class="menu-item">--}}
+{{--                            <!--begin:Menu link-->--}}
+{{--                            <a class="menu-link  @if($navItem=='stocks') active @endif"--}}
+{{--                               href="{{route('stocks.index')}}">--}}
+{{--													<span class="menu-bullet">--}}
+{{--														<span class="bullet bullet-dot"></span>--}}
+{{--													</span>--}}
+{{--                                <span class="menu-title">List</span>--}}
+{{--                            </a>--}}
+{{--                            <!--end:Menu link-->--}}
+{{--                        </div>--}}
+{{--                        <!--end:Menu item-->--}}
+
+{{--                    </div>--}}
+{{--                    <!--end:Menu sub-->--}}
+{{--                </div>--}}
+{{--                @endcan--}}
             </div>
             <!--end::Menu-->
         </div>

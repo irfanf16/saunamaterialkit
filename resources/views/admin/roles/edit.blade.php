@@ -174,7 +174,7 @@
                                         <!--begin::Table row-->
                                         <tr>
                                             <!--begin::Label-->
-                                            <td class="text-gray-800">Workshops</td>
+                                            <td class="text-gray-800">Contractors</td>
                                             <!--end::Label-->
                                             <!--begin::Options-->
                                             <td>
@@ -238,70 +238,70 @@
                                         </tr>
                                         <!--end::Table row-->
                                         <!--begin::Table row-->
-                                        <tr>
-                                            <!--begin::Label-->
-                                            <td class="text-gray-800">Products</td>
-                                            <!--end::Label-->
-                                            <!--begin::Options-->
-                                            <td>
-                                                <!--begin::Wrapper-->
-                                                <div class="d-flex">
-                                                    <!--begin::Checkbox-->
-                                                    <label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
-                                                        <input class="form-check-input" type="checkbox" value="admin-products-read" {{in_array('admin-products-read', $rolePermissions) ? "checked" : false}} name="permission[]" />
-                                                        <span class="form-check-label">Read</span>
-                                                    </label>
-                                                    <!--end::Checkbox-->
-                                                    <!--begin::Checkbox-->
-                                                    <label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
-                                                        <input class="form-check-input" type="checkbox" value="admin-products-write" {{in_array('admin-products-write', $rolePermissions) ? "checked" : false}} name="permission[]" />
-                                                        <span class="form-check-label">Write</span>
-                                                    </label>
-                                                    <!--end::Checkbox-->
-                                                    <!--begin::Checkbox-->
-                                                    <label class="form-check form-check-sm form-check-custom form-check-solid">
-                                                        <input class="form-check-input" type="checkbox" value="admin-products-create" {{in_array('admin-products-create', $rolePermissions) ? "checked" : false}} name="permission[]" />
-                                                        <span class="form-check-label">Create</span>
-                                                    </label>
-                                                    <!--end::Checkbox-->
-                                                </div>
-                                                <!--end::Wrapper-->
-                                            </td>
-                                            <!--end::Options-->
-                                        </tr>
-                                        <!--end::Table row-->
-                                        <!--begin::Table row-->
-                                        <tr>
-                                            <!--begin::Label-->
-                                            <td class="text-gray-800">Stock's Management</td>
-                                            <!--end::Label-->
-                                            <!--begin::Options-->
-                                            <td>
-                                                <!--begin::Wrapper-->
-                                                <div class="d-flex">
-                                                    <!--begin::Checkbox-->
-                                                    <label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
-                                                        <input class="form-check-input" type="checkbox" value="admin-stocks-read" {{in_array('admin-stocks-read', $rolePermissions) ? "checked" : false}} name="permission[]" />
-                                                        <span class="form-check-label">Read</span>
-                                                    </label>
-                                                    <!--end::Checkbox-->
-                                                    <!--begin::Checkbox-->
-                                                    <label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
-                                                        <input class="form-check-input" type="checkbox" value="admin-stocks-write" {{in_array('admin-stocks-write', $rolePermissions) ? "checked" : false}} name="permission[]" />
-                                                        <span class="form-check-label">Write</span>
-                                                    </label>
-                                                    <!--end::Checkbox-->
-                                                    <!--begin::Checkbox-->
-                                                    <label class="form-check form-check-sm form-check-custom form-check-solid">
-                                                        <input class="form-check-input" type="checkbox" value="admin-stocks-create" {{in_array('admin-stocks-create', $rolePermissions) ? "checked" : false}} name="permission[]" />
-                                                        <span class="form-check-label">Create</span>
-                                                    </label>
-                                                    <!--end::Checkbox-->
-                                                </div>
-                                                <!--end::Wrapper-->
-                                            </td>
-                                            <!--end::Options-->
-                                        </tr>
+{{--                                        <tr>--}}
+{{--                                            <!--begin::Label-->--}}
+{{--                                            <td class="text-gray-800">Products</td>--}}
+{{--                                            <!--end::Label-->--}}
+{{--                                            <!--begin::Options-->--}}
+{{--                                            <td>--}}
+{{--                                                <!--begin::Wrapper-->--}}
+{{--                                                <div class="d-flex">--}}
+{{--                                                    <!--begin::Checkbox-->--}}
+{{--                                                    <label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">--}}
+{{--                                                        <input class="form-check-input" type="checkbox" value="admin-products-read" {{in_array('admin-products-read', $rolePermissions) ? "checked" : false}} name="permission[]" />--}}
+{{--                                                        <span class="form-check-label">Read</span>--}}
+{{--                                                    </label>--}}
+{{--                                                    <!--end::Checkbox-->--}}
+{{--                                                    <!--begin::Checkbox-->--}}
+{{--                                                    <label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">--}}
+{{--                                                        <input class="form-check-input" type="checkbox" value="admin-products-write" {{in_array('admin-products-write', $rolePermissions) ? "checked" : false}} name="permission[]" />--}}
+{{--                                                        <span class="form-check-label">Write</span>--}}
+{{--                                                    </label>--}}
+{{--                                                    <!--end::Checkbox-->--}}
+{{--                                                    <!--begin::Checkbox-->--}}
+{{--                                                    <label class="form-check form-check-sm form-check-custom form-check-solid">--}}
+{{--                                                        <input class="form-check-input" type="checkbox" value="admin-products-create" {{in_array('admin-products-create', $rolePermissions) ? "checked" : false}} name="permission[]" />--}}
+{{--                                                        <span class="form-check-label">Create</span>--}}
+{{--                                                    </label>--}}
+{{--                                                    <!--end::Checkbox-->--}}
+{{--                                                </div>--}}
+{{--                                                <!--end::Wrapper-->--}}
+{{--                                            </td>--}}
+{{--                                            <!--end::Options-->--}}
+{{--                                        </tr>--}}
+{{--                                        <!--end::Table row-->--}}
+{{--                                        <!--begin::Table row-->--}}
+{{--                                        <tr>--}}
+{{--                                            <!--begin::Label-->--}}
+{{--                                            <td class="text-gray-800">Stock's Management</td>--}}
+{{--                                            <!--end::Label-->--}}
+{{--                                            <!--begin::Options-->--}}
+{{--                                            <td>--}}
+{{--                                                <!--begin::Wrapper-->--}}
+{{--                                                <div class="d-flex">--}}
+{{--                                                    <!--begin::Checkbox-->--}}
+{{--                                                    <label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">--}}
+{{--                                                        <input class="form-check-input" type="checkbox" value="admin-stocks-read" {{in_array('admin-stocks-read', $rolePermissions) ? "checked" : false}} name="permission[]" />--}}
+{{--                                                        <span class="form-check-label">Read</span>--}}
+{{--                                                    </label>--}}
+{{--                                                    <!--end::Checkbox-->--}}
+{{--                                                    <!--begin::Checkbox-->--}}
+{{--                                                    <label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">--}}
+{{--                                                        <input class="form-check-input" type="checkbox" value="admin-stocks-write" {{in_array('admin-stocks-write', $rolePermissions) ? "checked" : false}} name="permission[]" />--}}
+{{--                                                        <span class="form-check-label">Write</span>--}}
+{{--                                                    </label>--}}
+{{--                                                    <!--end::Checkbox-->--}}
+{{--                                                    <!--begin::Checkbox-->--}}
+{{--                                                    <label class="form-check form-check-sm form-check-custom form-check-solid">--}}
+{{--                                                        <input class="form-check-input" type="checkbox" value="admin-stocks-create" {{in_array('admin-stocks-create', $rolePermissions) ? "checked" : false}} name="permission[]" />--}}
+{{--                                                        <span class="form-check-label">Create</span>--}}
+{{--                                                    </label>--}}
+{{--                                                    <!--end::Checkbox-->--}}
+{{--                                                </div>--}}
+{{--                                                <!--end::Wrapper-->--}}
+{{--                                            </td>--}}
+{{--                                            <!--end::Options-->--}}
+{{--                                        </tr>--}}
                                         <!--end::Table row-->
                                         <!--begin::Table row-->
                                         <tr>

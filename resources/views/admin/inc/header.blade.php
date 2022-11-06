@@ -29,7 +29,7 @@
                 <!--begin::Menu-->
                 <div class="menu menu-rounded menu-column menu-lg-row my-5 my-lg-0 align-items-stretch fw-semibold px-2 px-lg-0" id="kt_app_header_menu" data-kt-menu="true">
                     <!--begin:Menu item-->
-                    <a href="{{route('home')}}" class="menu-item menu-lg-down-accordion menu-here-bg me-0 me-lg-2  @if($navItem=='home') here show @endif">
+                    <a href="{{route('admin.dashboard')}}" class="menu-item menu-lg-down-accordion menu-here-bg me-0 me-lg-2  @if($navItem=='home') here show @endif">
                         <!--begin:Menu link-->
                         <span class="menu-link">
 											<span class="menu-title">Dashboards</span>

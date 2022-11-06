@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\LocationController;
 use App\Http\Controllers\Admin\ProductController;
@@ -29,7 +30,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 //************************************** Start Admin Routes *************************************** //
 
-Route::redirect('/', 'systemUser');
+Route::redirect('/','systemUser');
 Route::group(['prefix' => 'systemUser'], function () {
     Route::group(['middleware' => ['guest']], function () {
         Route::redirect('/', 'systemUser/login');
@@ -41,7 +42,7 @@ Route::group(['prefix' => 'systemUser'], function () {
 Route::group(['prefix' => 'admin'], function () {
     Route::group(['middleware' => ['auth']], function () {
         Route::redirect('/', 'admin/dashboard');
-        Route::get('dashboard', [HomeController::class, 'index'])->name('home');
+        Route::get('dashboard', [HomeController::class, 'index'])->name('admin.dashboard');
         Route::resource('roles', RoleController::class);
         Route::resource('users', UserController::class);
         Route::resource('services', ServiceController::class);
@@ -49,6 +50,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::resource('locations', LocationController::class);
         Route::resource('products', ProductController::class);
         Route::resource('stocks', StockManagementController::class);
+        Route::resource('banners', BannerController::class);
     });
 });
 

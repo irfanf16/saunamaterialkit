@@ -1,5 +1,5 @@
 @extends('admin.layouts.master',['navItem'=>'workshop'])
-@section('title','Create Workshop')
+@section('title','Create Contractor')
 @section('content')
 
     <!--begin::Content container-->
@@ -169,6 +169,21 @@
                             <div class="col-lg-8 fv-row">
                                 <input type="text" name="workshop_address" class="form-control form-control-lg form-control-solid"  @error('workshop_address') style="border-color: red;" @enderror placeholder="Workshop Address" value="{{old('workshop_address')}}" />
                                 @error('workshop_address')
+                                <div class="alert ">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Input group-->
+                        <!--begin::Input group-->
+                        <div class="row mb-6">
+                            <!--begin::Label-->
+                            <label class="col-lg-4 col-form-label fw-semibold fs-6">Workshop Zipcode</label>
+                            <!--end::Label-->
+                            <!--begin::Col-->
+                            <div class="col-lg-8 fv-row">
+                                <input type="text" name="zipcode" class="form-control form-control-lg form-control-solid"  @error('zipcode') style="border-color: red;" @enderror placeholder="Workshop zipcode" value="{{old('zipcode')}}" />
+                                @error('zipcode')
                                 <div class="alert ">{{ $message }}</div>
                                 @enderror
                             </div>

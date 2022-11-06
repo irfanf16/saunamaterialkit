@@ -28,7 +28,7 @@
 <script src="{{asset('assets/js/custom/utilities/modals/create-app.js')}}"></script>
 <script src="{{asset('assets/js/custom/utilities/modals/users-search.js')}}"></script>
 
-@if(Request::Is('admin/users'))
+@if(Request::Is('admin/users') || Request::Is('admin/banners'))
 <script src="{{asset('assets/js/custom/apps/user-management/users/list/table.js')}}"></script>
 <script src="{{asset('assets/js/custom/apps/user-management/users/list/export-users.js')}}"></script>
 <script src="{{asset('assets/js/custom/apps/user-management/users/list/add.js')}}"></script>
